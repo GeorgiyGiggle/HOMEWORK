@@ -22,7 +22,7 @@ dict1 = {
     "user": "active",
     "verification": True,
     "list2": ["junior", "advanced", "senior"]
-        }
+}
 main_list = [4, False, "NEWBES ABOUND", list1, dict1]
 print(main_list)
 
