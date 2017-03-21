@@ -3,3 +3,5 @@
 /HW3/.idea
 *.pyc
 ENV/
+/HW7/phantomjs.exe
+/HW7/chromedriver.exe
