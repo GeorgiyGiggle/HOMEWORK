@@ -5,15 +5,28 @@ class Animal:
         self.threat_lvl = threat_lvl
         self.domestic = domestic
 
-cat = Animal(0.2, 3, "low", True)
-dog = Animal(0.5, 20, "medium", True)
-tiger = Animal(1, 60, "high", False)
-wolf = Animal(0.5, 30, "high", False)
-raccoon = Animal(0.3, 5)
+class CatFamily(Animal):
+    def voice(self):
+        return "Meow"
 
-cat.voice = "meow"
-dog.voice = "woof"
-tiger.voice = "roar"
-wolf.voice = "woooooooooof"
 
-print(dog.voice)
+class DogFamily(Animal):
+    def voice(self):
+        return "Woof"
+
+class Raccoon(Animal):
+    pass
+
+cat = CatFamily(0.2, 3, "low", True)
+dog = DogFamily(0.5, 20, "medium", True)
+raccoon = Raccoon(0.3, 5, "low", False)
+
+def check_voice(ClassObj):
+    try:
+        print(ClassObj.voice())
+    except AttributeError:
+        print("This animal has no voice")
+
+check_voice(cat)
+check_voice(dog)
+check_voice(raccoon)
